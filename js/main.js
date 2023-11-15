@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * requestAnimationFrame Shim 
- */
 window.requestAnimFrame = (function()
 {
   return  window.requestAnimationFrame       ||
@@ -14,11 +11,6 @@ window.requestAnimFrame = (function()
 })();
 
 $(document).ready(function () {
-
-    /*------Resize End Event -- Debounces resize of browser event-----------*/
-    //http://stackoverflow.com/questions/5489946/jquery-how-to-wait-for-the-end-of-resize-event-and-only-then-perform-an-ac
-    //https://learn.jquery.com/events/introduction-to-custom-events/
-
     var rtime;
     var timeout = false;
     var delta = 200;
@@ -42,8 +34,6 @@ $(document).ready(function () {
         }
     });
 
-    /*---------- Header image scroll n blur-----------*/
-
     if($('.innerbannerwrap .innerbanner').length){
       var scrollOptions = {
        test : $('.innerbannerwrap .innerbanner')
@@ -53,7 +43,6 @@ $(document).ready(function () {
       scrolling.init(scrollOptions);
     }
 
-    /*---------- navbar menu-----------*/
 
     $('.navbar-toggle').on('click', function () {
         $(this).toggleClass('is-active');
@@ -67,7 +56,6 @@ $(document).ready(function () {
         }
     });
 
-    /*-------------- sticky up menu-----------*/
 
     var lastScrollTop = 0,
         scrollDelta = 5,
@@ -97,13 +85,11 @@ $(document).ready(function () {
       lastScrollTop = st;
     });
 
-    /* ----------- menu dropdown ------------*/
 
     $('.menu-bar li').on('click', function () {
         $(this).find('.sub-menu').toggleClass('addSubMenu');
     });
 
-    /*--------- slide video ----------*/
 
     if ($('#videoSlide').length) {
         $('#videoSlide').slick({
@@ -142,7 +128,6 @@ $(document).ready(function () {
       });
     }
 
-    /*--------------- isotope  ------------------*/
   // if($('#galleryWrapper').length){
     $('.galleryMenu a').on('click' , function() {
       var el = $(this);
@@ -167,7 +152,7 @@ $(document).ready(function () {
         });
     
     // }
-    /* ---------- awards ------------*/
+    
 
     if($('.awards-wrap').length){
         $('.awards-wrap').slick({
@@ -210,7 +195,6 @@ $(document).ready(function () {
         });
     }
 
-    /* ---------- players ------------*/
 
     if($('.slideHeroes').length){
         $('.slideHeroes').slick({
@@ -309,7 +293,6 @@ $(document).ready(function () {
         $('#club_news').slick(slickOptions);
     });
 
-    /*------------------- history slide ----------------*/
 
     if($('.historyMeter').length){
         $('.historyMeter').slick({
@@ -337,8 +320,6 @@ $(document).ready(function () {
         });
     }
 
-    /*------------------- Club History Tab changer ----------------*/
-
     $('.historyMeter a').on('click',function (event) {
         event.preventDefault();
         var target = $(this).attr('href');
@@ -351,7 +332,6 @@ $(document).ready(function () {
         }
     });
 
-    /* ------------ masonary --------------*/
 
     var $grid = $('.grid');
     if($grid.length){
@@ -369,7 +349,6 @@ $(document).ready(function () {
         });
     }
 
-    /*----------------- memberfig--------------------*/
 
     if($('.boardmember').length){
         $('.boardmember').slick({
@@ -467,8 +446,6 @@ $(document).ready(function () {
         });
     }
 
-    /* -------- blogslider ---------*/
-
     if($('.blog_slider').length){
         $('.blog_slider').slick({
             infinite:true,
@@ -479,8 +456,6 @@ $(document).ready(function () {
             nextArrow: '.blog_next'
         });
     }
-
-    /* -------- blogslider ---------*/
 
     if($('.shop-wrap-slider').length){
         $('.shop-wrap-slider').slick({
@@ -499,8 +474,6 @@ $(document).ready(function () {
     }
     playerwindows();
     
-    
-    /* ------------- Hero Banner  -------------*/
 
     if($('#layerSlider').length){
         $('#layerSlider').layerSlider({
@@ -512,14 +485,13 @@ $(document).ready(function () {
 
     
 
-    /*------------ tab animation ------------------*/
+   
 
     $('#aboutTab a').click(function (e) {
       e.preventDefault();
       $(this).tab('show');
     });
-    /* ---------------- image gallery ---------*/
-
+   
     var $containergallery = $('#galleryWrapper');
     if($containergallery.length){
 
@@ -544,13 +516,12 @@ $(document).ready(function () {
             $('#galleryLoader').hide();
         });
     }
-    /* -------------- achivement -----------*/
+   
     var heightachivement = $('.achivementwrapper .achievement li .figcontentachv').innerHeight();
     $('.achivementwrapper .achievement li .fig').css('height' ,heightachivement );
     $('.achivementwrapper .achievement li .fig').css('line-height' ,heightachivement+ 'px');
 
 
-    /*-------  award accordion -------*/
 
     $('.yr_accordion a').on('click',function (event) {
         event.preventDefault();
@@ -565,7 +536,6 @@ $(document).ready(function () {
 
    
 
-    /*- ----------------- score board ----------------*/
 
     function scoreboard(){
         if($windowWidth <= 991){
@@ -592,7 +562,7 @@ $(document).ready(function () {
         scoreboard();
     });
 
-    /*--------------- Waypoint -- Animation on scroll  ------------------*/
+   
 
     function wayPoint() {
         if ($windowWidth >= 1200){
@@ -626,7 +596,7 @@ $(document).ready(function () {
     if ($windowWidth >= 992) { wayPoint(); }
 
 
-    /*--------------- Magnific Popup  ------------------*/
+   
 
     //Single Item
     $('.magnificPopup').magnificPopup({
@@ -664,15 +634,14 @@ $(document).ready(function () {
     });
 
 
-    /*--------------- Today's Date ------------------*/
-
+   
     if($('.datetime').length){
         var today = new Date;
         var n = today.toDateString();
         $('.datetime').html(n);
     }
 
-    /* ------------- scrollbar ---------------*/
+
       if($('.scrollable').length){
         if ($(window).width() > 768){
           $('.scrollable').slimScroll({
@@ -684,7 +653,7 @@ $(document).ready(function () {
         }  
       }   
 
-    /*--------------- Countdown Timer - Homepage ------------------*/
+
 
     if($('.match_timing').length){
         $('.match_timing').countdown('2023/11/31', function(event) {
