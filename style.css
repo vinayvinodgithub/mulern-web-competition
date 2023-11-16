@@ -7431,8 +7431,6 @@ ul.slick-dots {
     display: inline-block;
     float: none; } }
 
-
-/* -------------- latest result section -----------*/
 .latestResult {
   padding: 100px 0;
   background: url("images/background/bg2.png") no-repeat;
@@ -7444,7 +7442,7 @@ ul.slick-dots {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 200px;
+    width: 150px;
     height: 150px;
     margin-left: -75px;
     margin-top: -75px;
@@ -7506,7 +7504,7 @@ ul.slick-dots {
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px;
-      background-image: url("");
+      background-image: url("images/result/resultlogo.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -7562,7 +7560,7 @@ ul.slick-dots {
           content: '';
           width: 50%;
           height: 3px;
-          background-color: #000000;
+          background-color: #b81e20;
           top: 100%;
           left: 0; }
       .latestResult .result .content p {
@@ -7576,7 +7574,7 @@ ul.slick-dots {
         text-overflow: ellipsis;
         text-transform: capitalize; }
         .latestResult .result .content p:first-of-type {
-          color:#000000;
+          color: #b81e20;
           text-transform: uppercase;
           font-weight: 700;
           padding: 10px 0; }
@@ -7663,7 +7661,7 @@ ul.slick-dots {
 
 @media screen and (min-width: 1200px) {
   .latestResult .result-details .figure {
-    background-image: url("");
+    background-image: url("images/result/resultlogo.png");
     background-size: inherit;
     background-position: center;
     background-repeat: no-repeat;
@@ -7693,4 +7691,152 @@ ul.slick-dots {
   .latestResult .content {
     opacity: 0; } }
 
+.matchSchedule {
+  padding: 70px 0; }
+  .matchSchedule p {
+    text-align: center;
+    padding: 40px 0; }
+
+.bookticket {
+  background-image: url("images/background/ticketbooking.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0; }
+  .bookticket h2 {
+    color: white; }
+  .bookticket .btn-white {
+    border-color: white; }
+
+@media screen and (min-width: 992px) {
+  .bookticket .booking-content {
+    text-align: right; } }
+
+.latestvideo {
+  padding: 20px 0; }
+
+.video-container {
+  height: 300px; }
+
+.video .liveVideo {
+  width: 100%;
+  height: 100%; }
+
+.video-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .video-content {
+      float: left;
+      width: 33.3333333333%; } }
+
+.video-show {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .video-show {
+      float: left;
+      width: 66.6666666667%; } }
+
+.video-content-selector {
+  background: #525659;
+  padding: 10px; }
+
+.video-soclalLink {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.video-selector {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+  padding: 9px; }
+  .video-selector a {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 15px;
+    position: relative; }
+    .video-selector a:after {
+      position: absolute;
+      color: white;
+      font-family: FontAwesome;
+      content: "";
+      font-size: 14px; }
+    .video-selector a:first-of-type:after {
+      content: "\f100";
+      left: -20px; }
+    .video-selector a:last-of-type:after {
+      content: "\f101";
+      right: -20px; }
+
+.btn-down, .btn-up {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white; }
+
+ul.videoLive {
+  list-style-type: none;
+  background: #b81e20;
+  overflow: hidden; }
+  ul.videoLive .active {
+    background: #232a32; }
+  ul.videoLive li {
+    float: left;
+    width: 50%; }
+    ul.videoLive li a {
+      padding: 39px 50px 19px 90px;
+      display: block;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: white;
+      font-weight: 400;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255, 255, 255, 0.7);
+      text-align: left;
+      position: relative; }
+      ul.videoLive li a div span {
+        display: block; }
+      ul.videoLive li a:after {
+        position: absolute;
+        content: '\f04b';
+        font-family: FontAwesome;
+        font-size: 33px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        left: 30px; }
+      ul.videoLive li a a.active {
+        background: black; }
 
